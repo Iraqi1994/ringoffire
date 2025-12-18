@@ -9,23 +9,23 @@
 <div class="field">
   <div class="card-stack">
     @for (count of [1, 2, 3, 4]; track $index; let index = $index) {
-    <img [ngStyle]="{ 'right.px': index * 5 }" src="/img/cards/card_cover.png" alt="card stack" />
+    <img [ngStyle]="{ 'right.px': index * 5 }" src="img/cards/card_cover.png" alt="card stack" />
     }
     <img
       (click)="drawCard()"
       class="top-card"
       style="right: 20px"
-      src="/img/cards/card_cover.png"
+      src="img/cards/card_cover.png"
       alt="card stack"
     />
     @for (card of gameModel.playedCards; track $index) {
-    <img src="/img/cards/{{ card }}.png" alt="played card" class="played-card" />
+    <img src="img/cards/{{ card }}.png" alt="played card" class="played-card" />
     } @if (drawCardAnimation) {
     <img
       [class.draw-card]="drawCardAnimation"
       class="draw-card"
       style="right: 20px"
-      src="/img/cards/{{ currentCard }}.png"
+      src="img/cards/{{ currentCard }}.png"
       alt="card stack"
     />
     }
